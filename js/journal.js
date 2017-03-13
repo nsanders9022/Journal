@@ -18,7 +18,29 @@ Entry.prototype.countVowels = function(entryBody) {
     }
   }
   return count;
-}
+};
+
+Entry.prototype.getTeaser = function(entryBody) {
+  var punctuation = [".", "!", "?"];
+  for (var j = 0; j < entryBody.length; j++) {
+    if ((punctuation.indexOf(entryBody[j])) != -1) {
+      var slice_location = j;
+      var first_sentence = entryBody.slice(0,slice_location + 1);
+      var sentence_words = first_sentence.split(" ");
+      if (sentence_words.length <= 8) {
+        return sentence_words.join(" ");
+      } else {
+        var newArray = []
+        for(i = 0; i < 8; i++)
+        {
+          newArray.push(sentence_words[i]);
+        }
+        return newArray.join(" ");
+      }
+      break;
+    }
+  }
+};
 
 
 exports.entryModule = Entry;
