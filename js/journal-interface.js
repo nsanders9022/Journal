@@ -7,7 +7,9 @@ $(document).ready(function() {
     var aBody = $('#body').val();
     var newEntry = new Entry();
     var result = newEntry.countWords(aBody);
+    var vowelResult = newEntry.countVowels(aBody);
 
     $('#word-count').append(result);
+    $('#vowel-count').append(vowelResult);
   });
 });
