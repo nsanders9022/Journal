@@ -1,4 +1,4 @@
-# Title
+# Journal
 
 #### By _**Nicole Sanders, Caitlin Hines**_
 
