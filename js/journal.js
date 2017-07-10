@@ -9,14 +9,14 @@ Entry.prototype.countWords = function(entryBody) {
 };
 
 Entry.prototype.countVowels = function(entryBody) {
-  var vowels = ["a", "e", "i", "o", "u"];
-  var count = 0;
-
-  for (var i=0; i < entryBody.length; i++) {
-    if ((vowels.indexOf(entryBody[i])) != -1) {
-      count +=1;
-    }
-  }
+  var vowels = /aieou/g;
+  var count = entryBody.match(vowels);
+s
+  // for (var i=0; i < entryBody.length; i++) {
+  //   if ((vowels.indexOf(entryBody[i])) != -1) {
+  //     count +=1;s
+  //   }
+  // }
   return count;
 };
 
